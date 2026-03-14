@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Telvergence — Dominate From The Cloud. The AI-powered UCCPXaaS platform for first adopters who refuse to be left behind. Autonomous. Encrypted. Unbreakable.">
+<title>TELVERGENCE — Dominate From The Cloud</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@200;300;400;600;700;900&family=Barlow:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --void:#020408;--deep:#04080F;--space:#060D1A;--mid:#0A1628;
+  --gold:#D4A017;--gold-lt:#F0C842;--gold-dim:rgba(212,160,23,.12);
+  --gold-glow:rgba(212,160,23,.35);
+  --electric:#00BFFF;--elec-dim:rgba(0,191,255,.1);--elec-glow:rgba(0,191,255,.35);
+  --violet:#8B5CF6;--vio-dim:rgba(139,92,246,.1);--vio-glow:rgba(139,92,246,.3);
+  --green:#22C55E;--green-dim:rgba(34,197,94,.1);
+  --danger:#E84855;--orange:#F97316;
+  --white:#FFF;--off:#EAF0FA;--muted:#6B8199;
+  --border-g:rgba(212,160,23,.2);--border-b:rgba(0,191,255,.15);
+  --border-v:rgba(139,92,246,.2);--border-w:rgba(255,255,255,.07);
+  --fn-d:'Bebas Neue',sans-serif;--fn-c:'Barlow Condensed',sans-serif;
+  --fn-b:'Barlow',sans-serif;--fn-m:'DM Mono',monospace;
+  --r:8px;--r-lg:14px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--fn-b);background:var(--void);color:var(--white);overflow-x:hidden;line-height:1.6}
+a{color:inherit;text-decoration:none}
+button{cursor:pointer;border:none;background:none;font-family:inherit}
+::-webkit-scrollbar{width:3px}
+::-webkit-scrollbar-track{background:var(--void)}
+::-webkit-scrollbar-thumb{background:var(--gold);border-radius:2px}
+
+/* ============================================================
+   TELVERGENCE LOGO SYSTEM — PULSATING CORE
+   ============================================================ */
+.tv-logo-mark{
+  position:relative;display:inline-flex;align-items:center;justify-content:center;
+}
+.tv-logo-rings{
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  pointer-events:none;
+}
+.tv-ring{
+  position:absolute;border-radius:50%;border:1px solid;
+  top:50%;left:50%;transform:translate(-50%,-50%);
+  animation:ringPulse var(--dur,3s) ease-in-out infinite var(--del,0s) both;
+}
+.tv-ring-1{width:80px;height:80px;border-color:rgba(212,160,23,.6);--dur:2.5s;--del:0s}
+.tv-ring-2{width:120px;height:120px;border-color:rgba(212,160,23,.35);--dur:2.5s;--del:.4s}
+.tv-ring-3{width:170px;height:170px;border-color:rgba(0,191,255,.25);--dur:2.5s;--del:.8s}
+.tv-ring-4{width:230px;height:230px;border-color:rgba(0,191,255,.15);--dur:2.5s;--del:1.2s}
+.tv-ring-5{width:300px;height:300px;border-color:rgba(139,92,246,.1);--dur:2.5s;--del:1.6s}
+@keyframes ringPulse{
+  0%{opacity:0;transform:translate(-50%,-50%) scale(.7)}
+  40%{opacity:1}
+  100%{opacity:0;transform:translate(-50%,-50%) scale(1.35)}
+}
+.tv-logo-core{
+  position:relative;z-index:2;
+  width:64px;height:64px;border-radius:50%;
+  background:linear-gradient(135deg,rgba(212,160,23,.25),rgba(0,191,255,.15));
+  border:2px solid var(--gold);
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 0 30px rgba(212,160,23,.4),inset 0 0 20px rgba(212,160,23,.1);
+  animation:coreBreathe 3s ease-in-out infinite;
+}
+@keyframes coreBreathe{
+  0%,100%{box-shadow:0 0 30px rgba(212,160,23,.4),inset 0 0 20px rgba(212,160,23,.1)}
+  50%{box-shadow:0 0 60px rgba(212,160,23,.7),0 0 120px rgba(212,160,23,.2),inset 0 0 30px rgba(212,160,23,.15)}
+}
+.tv-logo-bolt{font-size:28px;line-height:1;animation:boltFlash 2.5s ease-in-out infinite}
+@keyframes boltFlash{0%,100%{opacity:1;filter:drop-shadow(0 0 6px rgba(212,160,23,.8))}50%{opacity:.7;filter:drop-shadow(0 0 14px rgba(212,160,23,1))}}
+.tv-wordmark{
+  font-family:var(--fn-d);font-size:22px;letter-spacing:5px;color:var(--gold);
+  text-shadow:0 0 20px rgba(212,160,23,.5);margin-left:14px;line-height:1;
+}
+.tv-tagline{
+  font-family:var(--fn-m);font-size:8px;letter-spacing:3px;color:var(--electric);
+  display:block;margin-top:2px;
+}
+
+/* HERO LOGO — BIG VERSION */
+.hero-logo-wrap{
+  display:flex;flex-direction:column;align-items:center;margin-bottom:40px;
+  animation:fadeUp .9s ease .1s both;
+}
+.hero-ring-1{width:140px;height:140px;--dur:3s;--del:0s}
+.hero-ring-2{width:220px;height:220px;--dur:3s;--del:.5s}
+.hero-ring-3{width:320px;height:320px;--dur:3s;--del:1s}
+.hero-ring-4{width:440px;height:440px;--dur:3s;--del:1.5s}
+.hero-ring-5{width:580px;height:580px;--dur:3s;--del:2s}
+.hero-logo-core{width:110px;height:110px;border-width:3px}
+.hero-logo-bolt{font-size:50px}
+.hero-wordmark{
+  font-family:var(--fn-d);font-size:clamp(52px,9vw,96px);letter-spacing:10px;
+  color:var(--gold);text-shadow:0 0 40px rgba(212,160,23,.5),0 0 80px rgba(212,160,23,.2);
+  margin-top:24px;line-height:1;
+}
+.hero-sub-wordmark{
+  font-family:var(--fn-m);font-size:11px;letter-spacing:5px;color:var(--electric);
+  margin-top:8px;text-shadow:0 0 20px rgba(0,191,255,.5);
+}
+
+/* ============================================================
+   NAV
+   ============================================================ */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:300;
+  background:rgba(2,4,8,.97);backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--border-g);
+  display:flex;align-items:center;justify-content:space-between;padding:10px 40px;
+}
+.nav-logo-wrap{display:flex;align-items:center;gap:0;cursor:pointer}
+.nav-logo-core-sm{
+  width:36px;height:36px;border-radius:50%;
+  background:linear-gradient(135deg,rgba(212,160,23,.2),rgba(0,191,255,.1));
+  border:1.5px solid var(--gold);display:flex;align-items:center;justify-content:center;
+  font-size:16px;animation:coreBreathe 3s ease-in-out infinite;flex-shrink:0;
+}
+.nav-tv-text{font-family:var(--fn-d);font-size:17px;letter-spacing:4px;color:var(--gold);margin-left:10px}
+.nav-tv-sub{font-family:var(--fn-m);font-size:7px;letter-spacing:3px;color:var(--electric);display:block}
+.nav-links{display:flex;align-items:center;gap:28px}
+.nav-link{font-family:var(--fn-c);font-size:12px;font-weight:600;letter-spacing:2px;color:var(--muted);text-transform:uppercase;transition:color .2s}
+.nav-link:hover{color:var(--gold)}
+.nav-ctas{display:flex;gap:10px}
+.nav-btn{font-family:var(--fn-c);font-size:12px;font-weight:700;letter-spacing:2px;padding:8px 18px;border-radius:30px;transition:all .25s}
+.nb-ghost{border:1px solid var(--border-b);color:var(--electric);background:var(--elec-dim)}
+.nb-gold{background:var(--gold);color:var(--void)}
+.nb-gold:hover{background:var(--gold-lt);transform:translateY(-1px)}
+.live-dot{width:6px;height:6px;background:var(--green);border-radius:50%;animation:blink 1.4s ease infinite;display:inline-block;margin-right:5px}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero{
+  min-height:100vh;position:relative;overflow:hidden;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;padding:120px 40px 80px;
+}
+.hero-bg{
+  position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse at 20% 50%,rgba(0,191,255,.06),transparent 45%),
+    radial-gradient(ellipse at 80% 50%,rgba(139,92,246,.07),transparent 45%),
+    radial-gradient(ellipse at 50% 0%,rgba(212,160,23,.08),transparent 40%),
+    radial-gradient(ellipse at 50% 100%,rgba(0,191,255,.04),transparent 40%),
+    linear-gradient(180deg,#020408 0%,#040810 30%,#060D1A 60%,#04080F);
+}
+.star-field{position:absolute;inset:0;overflow:hidden}
+.star{position:absolute;background:#fff;border-radius:50%;animation:twinkle var(--tw,3s) ease-in-out infinite var(--td,0s)}
+@keyframes twinkle{0%,100%{opacity:var(--minop,.1)}50%{opacity:var(--maxop,.8)}}
+.hero-content{position:relative;z-index:2;max-width:1000px;width:100%}
+
+.urgency-chip{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(232,72,85,.12);border:1px solid rgba(232,72,85,.35);
+  color:var(--danger);font-family:var(--fn-m);font-size:9px;letter-spacing:3px;
+  padding:7px 20px;border-radius:30px;margin-bottom:20px;
+  animation:fadeUp .7s ease both;
+}
+.urgency-chip .pulse{width:8px;height:8px;background:var(--danger);border-radius:50%;animation:dangerPulse 1s ease infinite}
+@keyframes dangerPulse{0%,100%{box-shadow:0 0 0 0 rgba(232,72,85,.5)}50%{box-shadow:0 0 0 7px rgba(232,72,85,0)}}
+
+.hero h1{
+  font-family:var(--fn-d);font-size:clamp(44px,9vw,110px);
+  letter-spacing:3px;line-height:.88;margin-bottom:16px;
+  animation:fadeUp .9s ease .3s both;
+}
+.h1-g{color:var(--gold);text-shadow:0 0 60px rgba(212,160,23,.4);display:block}
+.h1-w{color:var(--white);display:block}
+.h1-e{color:var(--electric);text-shadow:0 0 60px rgba(0,191,255,.4);display:block}
+.h1-v{color:var(--violet);text-shadow:0 0 60px rgba(139,92,246,.4);display:block}
+.hero-rule{width:120px;height:2px;background:linear-gradient(90deg,var(--electric),var(--gold),var(--violet));margin:20px auto;animation:fadeUp .9s ease .4s both}
+.hero-sub{font-family:var(--fn-c);font-size:clamp(16px,2.5vw,24px);font-weight:300;letter-spacing:2px;color:var(--off);max-width:780px;margin:0 auto 16px;animation:fadeUp .9s ease .5s both}
+.hero-detail{font-size:16px;color:var(--muted);max-width:640px;margin:0 auto 44px;font-weight:300;line-height:1.85;animation:fadeUp .9s ease .6s both}
+.hero-ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:48px;animation:fadeUp .9s ease .7s both}
+.btn-xl{font-family:var(--fn-d);font-size:20px;letter-spacing:3px;padding:16px 40px;border-radius:var(--r);transition:all .3s}
+.btn-gold-xl{background:var(--gold);color:var(--void)}
+.btn-gold-xl:hover{background:var(--gold-lt);transform:translateY(-2px);box-shadow:0 14px 40px rgba(212,160,23,.35)}
+.btn-ghost-xl{background:var(--vio-dim);border:1px solid var(--border-v);color:var(--violet)}
+.btn-ghost-xl:hover{background:rgba(139,92,246,.2);transform:translateY(-2px)}
+.hero-kpis{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;border-top:1px solid var(--border-w);padding-top:32px;animation:fadeUp .9s ease .8s both}
+.kpi{text-align:center;padding:10px 22px}
+.kpi-n{font-family:var(--fn-d);font-size:40px;line-height:1}
+.kpi-l{font-family:var(--fn-m);font-size:8px;letter-spacing:2px;color:var(--muted);text-transform:uppercase;margin-top:4px}
+.kpi-div{width:1px;height:36px;background:var(--border-w)}
+
+/* ============================================================
+   SECTIONS
+   ============================================================ */
+section{padding:80px 40px}
+.s-eye{font-family:var(--fn-m);font-size:9px;letter-spacing:4px;color:var(--gold);text-transform:uppercase;text-align:center;margin-bottom:10px}
+.s-h{font-family:var(--fn-d);font-size:clamp(30px,5vw,60px);letter-spacing:2px;text-align:center;margin-bottom:16px}
+.s-sub{font-size:16px;color:var(--muted);max-width:660px;margin:0 auto 44px;line-height:1.85;text-align:center;font-weight:300}
+.max{max-width:1100px;margin:0 auto}
+
+/* ============================================================
+   RACE TO SINGULARITY — THE URGENCY SECTION
+   ============================================================ */
+.race{
+  background:linear-gradient(135deg,#020408,#04060E);
+  border-top:2px solid var(--danger);
+  position:relative;overflow:hidden;
+}
+.race::before{
+  content:'FIRST OR LAST';
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  font-family:var(--fn-d);font-size:clamp(80px,18vw,280px);letter-spacing:10px;
+  color:rgba(232,72,85,.03);white-space:nowrap;pointer-events:none;
+  text-transform:uppercase;
+}
+.race-inner{position:relative;z-index:1;max-width:960px;margin:0 auto;text-align:center}
+.countdown-strip{
+  display:flex;gap:0;border:1px solid rgba(232,72,85,.3);border-radius:var(--r-lg);
+  overflow:hidden;margin:0 auto 48px;max-width:700px;
+}
+.cd-item{flex:1;padding:24px 16px;background:rgba(232,72,85,.05);border-right:1px solid rgba(232,72,85,.2);text-align:center}
+.cd-item:last-child{border-right:none}
+.cd-n{font-family:var(--fn-d);font-size:52px;color:var(--danger);line-height:1}
+.cd-l{font-family:var(--fn-m);font-size:8px;letter-spacing:2px;color:rgba(232,72,85,.6);text-transform:uppercase;margin-top:4px}
+
+.first-last-grid{display:grid;grid-template-columns:1fr auto 1fr;gap:24px;align-items:start;margin-bottom:48px}
+.adopter-col{border-radius:var(--r-lg);padding:28px}
+.adopter-col.first{background:rgba(34,197,94,.06);border:1px solid rgba(34,197,94,.25)}
+.adopter-col.last{background:rgba(232,72,85,.06);border:1px solid rgba(232,72,85,.2)}
+.adopter-head{font-family:var(--fn-d);font-size:24px;letter-spacing:2px;margin-bottom:16px}
+.adopter-col.first .adopter-head{color:var(--green)}
+.adopter-col.last .adopter-head{color:var(--danger)}
+.adopter-item{display:flex;gap:8px;font-size:13px;color:var(--off);margin-bottom:10px;line-height:1.5;align-items:flex-start}
+.race-divider{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:0 8px}
+.race-vs{font-family:var(--fn-d);font-size:36px;color:var(--gold);letter-spacing:2px}
+.race-arrow{font-size:24px;color:var(--muted)}
+
+.singularity-quote{
+  background:linear-gradient(135deg,rgba(212,160,23,.08),rgba(0,191,255,.05));
+  border:1px solid var(--border-g);border-left:4px solid var(--gold);
+  border-radius:var(--r-lg);padding:28px 32px;text-align:left;max-width:800px;margin:0 auto;
+}
+.sq-text{font-family:var(--fn-c);font-size:clamp(18px,2.5vw,26px);font-weight:300;letter-spacing:1px;line-height:1.6;color:var(--off);margin-bottom:12px}
+.sq-text em{font-style:normal;color:var(--gold)}
+.sq-attr{font-family:var(--fn-m);font-size:9px;letter-spacing:3px;color:var(--muted);text-transform:uppercase}
+
+/* ============================================================
+   PLATFORM OVERVIEW
+   ============================================================ */
+.platform{background:var(--deep)}
+.platform-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.plat-card{
+  background:rgba(255,255,255,.03);border:1px solid var(--border-w);
+  border-radius:var(--r-lg);padding:28px;
+  border-top:3px solid transparent;transition:all .3s;
+}
+.plat-card:hover{transform:translateY(-4px)}
+.plat-card.gold{border-top-color:var(--gold)}
+.plat-card.elec{border-top-color:var(--electric)}
+.plat-card.vio{border-top-color:var(--violet)}
+.plat-card.green{border-top-color:var(--green)}
+.plat-card:hover.gold{background:rgba(212,160,23,.04);box-shadow:0 12px 40px rgba(212,160,23,.08)}
+.plat-card:hover.elec{background:var(--elec-dim);box-shadow:0 12px 40px rgba(0,191,255,.06)}
+.plat-card:hover.vio{background:var(--vio-dim);box-shadow:0 12px 40px rgba(139,92,246,.06)}
+.plat-card:hover.green{background:var(--green-dim);box-shadow:0 12px 40px rgba(34,197,94,.06)}
+.pc-icon{font-size:34px;margin-bottom:14px}
+.pc-h{font-family:var(--fn-d);font-size:22px;letter-spacing:1.5px;margin-bottom:8px}
+.pc-body{font-size:13px;color:var(--muted);line-height:1.65;margin-bottom:14px}
+.pc-badge{font-family:var(--fn-m);font-size:8px;letter-spacing:2px;padding:3px 9px;border-radius:20px;display:inline-block}
+.plat-card.gold .pc-badge{color:var(--gold);border:1px solid var(--border-g)}
+.plat-card.elec .pc-badge{color:var(--electric);border:1px solid var(--border-b)}
+.plat-card.vio .pc-badge{color:var(--violet);border:1px solid var(--border-v)}
+.plat-card.green .pc-badge{color:var(--green);border:1px solid rgba(34,197,94,.3)}
+
+/* ============================================================
+   PARADIGM SHIFT — 20/80 → 80/20
+   ============================================================ */
+.paradigm{
+  background:linear-gradient(135deg,var(--mid),#060D1A);
+  border-top:1px solid var(--border-g);border-bottom:1px solid var(--border-g);
+  position:relative;overflow:hidden;
+}
+.paradigm::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse at 50% 0%,rgba(212,160,23,.06),transparent 50%);
+}
+.paradigm-inner{position:relative;z-index:1;max-width:960px;margin:0 auto}
+.shift-visual{display:flex;align-items:center;justify-content:center;gap:40px;flex-wrap:wrap;margin:40px 0}
+.shift-block{text-align:center}
+.shift-label{font-family:var(--fn-m);font-size:9px;letter-spacing:3px;color:var(--muted);text-transform:uppercase;margin-bottom:10px}
+.shift-pct{font-family:var(--fn-d);font-size:clamp(60px,12vw,120px);line-height:1}
+.shift-pct.before{color:rgba(232,72,85,.6)}
+.shift-pct.after{color:var(--green);text-shadow:0 0 40px rgba(34,197,94,.3)}
+.shift-desc{font-size:13px;color:var(--muted);margin-top:6px;line-height:1.5}
+.shift-arrow{font-size:48px;color:var(--gold);animation:arrowBounce 1.5s ease-in-out infinite}
+@keyframes arrowBounce{0%,100%{transform:translateX(0)}50%{transform:translateX(8px)}}
+.paradigm-detail{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:16px}
+.pd-col{background:rgba(255,255,255,.03);border:1px solid var(--border-w);border-radius:var(--r-lg);padding:24px}
+.pd-col-h{font-family:var(--fn-c);font-size:16px;font-weight:700;letter-spacing:2px;margin-bottom:14px}
+.pd-col.costs .pd-col-h{color:var(--danger)}
+.pd-col.gains .pd-col-h{color:var(--green)}
+.pd-item{display:flex;gap:8px;font-size:13px;color:var(--off);margin-bottom:10px;line-height:1.5}
+
+/* ============================================================
+   STORM DISPATCH — FEATURED VERTICAL
+   ============================================================ */
+.storm-vertical{background:var(--space)}
+.sd-showcase{
+  background:linear-gradient(135deg,rgba(212,160,23,.1),rgba(0,191,255,.06));
+  border:1px solid var(--border-g);border-radius:var(--r-lg);padding:40px;
+  display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;
+  max-width:960px;margin:0 auto;
+}
+.sd-left .s-eye{text-align:left}
+.sd-left .s-h{text-align:left;font-size:clamp(28px,4vw,52px)}
+.sd-left p{font-size:14px;color:var(--muted);line-height:1.75;margin-bottom:16px}
+.sd-badge-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.sd-badge{font-family:var(--fn-m);font-size:8px;letter-spacing:2px;color:var(--electric);border:1px solid var(--border-b);padding:3px 9px;border-radius:20px}
+.sd-cta{
+  display:inline-block;background:var(--gold);color:var(--void);
+  font-family:var(--fn-d);font-size:18px;letter-spacing:3px;padding:14px 32px;border-radius:var(--r);
+  transition:all .3s;
+}
+.sd-cta:hover{background:var(--gold-lt);transform:translateY(-2px);box-shadow:0 10px 30px rgba(212,160,23,.35)}
+.sd-metrics{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.sd-metric{background:rgba(0,0,0,.3);border:1px solid var(--border-b);border-radius:var(--r);padding:18px;text-align:center}
+.sdm-n{font-family:var(--fn-d);font-size:36px;color:var(--gold);line-height:1}
+.sdm-l{font-family:var(--fn-m);font-size:8px;letter-spacing:2px;color:var(--muted);text-transform:uppercase;margin-top:4px}
+
+/* ============================================================
+   NETWORK — AUTO VENDOR ONBOARDING
+   ============================================================ */
+.network{background:var(--deep)}
+.network-flow{max-width:960px;margin:0 auto}
+.nf-steps{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border:1px solid var(--border-b);border-radius:var(--r-lg);overflow:hidden}
+.nf-step{padding:24px 16px;border-right:1px solid var(--border-b);background:rgba(0,191,255,.03);text-align:center;transition:background .3s}
+.nf-step:last-child{border-right:none}
+.nf-step:hover{background:rgba(0,191,255,.08)}
+.nf-num{font-family:var(--fn-d);font-size:40px;color:rgba(0,191,255,.2);line-height:1;margin-bottom:8px}
+.nf-h{font-family:var(--fn-c);font-size:13px;font-weight:700;letter-spacing:1.5px;color:var(--electric);margin-bottom:6px}
+.nf-body{font-size:11px;color:var(--muted);line-height:1.6}
+.nf-badge{font-family:var(--fn-m);font-size:8px;letter-spacing:1.5px;color:var(--green);border:1px solid rgba(34,197,94,.2);padding:2px 7px;border-radius:20px;display:inline-block;margin-top:8px}
+
+.verticals-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:40px}
+.vert-chip{
+  display:flex;align-items:center;gap:12px;
+  background:rgba(255,255,255,.03);border:1px solid var(--border-w);border-radius:var(--r);
+  padding:14px 16px;transition:all .3s;
+}
+.vert-chip:hover{background:var(--gold-dim);border-color:var(--border-g);transform:translateX(4px)}
+.vert-chip-icon{font-size:22px}
+.vert-chip-title{font-family:var(--fn-c);font-size:14px;font-weight:700;letter-spacing:1px;color:var(--white)}
+.vert-chip-sub{font-size:11px;color:var(--muted)}
+.vert-chip-badge{font-family:var(--fn-m);font-size:8px;letter-spacing:1.5px;padding:2px 7px;border-radius:20px;margin-left:auto;flex-shrink:0}
+.vc-b-gold{color:var(--gold);border:1px solid var(--border-g)}
+.vc-b-elec{color:var(--electric);border:1px solid var(--border-b)}
+
+/* ============================================================
+   LMS / BIG DATA / CRITICAL MASS
+   ============================================================ */
+.lms{
+  background:linear-gradient(135deg,#030608,#050A14);
+  position:relative;overflow:hidden;
+}
+.lms::before{
+  content:'';position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse at 30% 50%,rgba(139,92,246,.06),transparent 50%),
+    radial-gradient(ellipse at 70% 50%,rgba(0,191,255,.04),transparent 50%);
+}
+.lms-inner{position:relative;z-index:1}
+.lms-stages{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--border-v);border-radius:var(--r-lg);overflow:hidden;max-width:1000px;margin:0 auto 48px}
+.lms-stage{padding:28px 20px;text-align:center;border-right:1px solid var(--border-v);background:rgba(139,92,246,.04);transition:background .3s;position:relative}
+.lms-stage:last-child{border-right:none;background:rgba(139,92,246,.1)}
+.lms-stage:last-child .lms-stage-n{color:var(--violet);text-shadow:0 0 30px rgba(139,92,246,.5)}
+.lms-stage:hover{background:rgba(139,92,246,.1)}
+.lms-stage-icon{font-size:30px;margin-bottom:10px}
+.lms-stage-n{font-family:var(--fn-d);font-size:42px;color:rgba(139,92,246,.5);line-height:1;margin-bottom:8px}
+.lms-stage-h{font-family:var(--fn-c);font-size:14px;font-weight:700;letter-spacing:1.5px;color:var(--violet);margin-bottom:6px}
+.lms-stage-body{font-size:11px;color:var(--muted);line-height:1.6}
+.critical-mass-badge{
+  position:absolute;top:-12px;left:50%;transform:translateX(-50%);
+  background:var(--violet);color:var(--white);font-family:var(--fn-m);font-size:8px;
+  letter-spacing:2px;padding:4px 12px;border-radius:20px;white-space:nowrap;
+}
+
+.lms-features{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;max-width:1000px;margin:0 auto}
+.lms-feat{background:var(--vio-dim);border:1px solid var(--border-v);border-radius:var(--r-lg);padding:24px;border-top:2px solid var(--violet)}
+.lms-feat-icon{font-size:28px;margin-bottom:12px}
+.lms-feat-h{font-family:var(--fn-c);font-size:16px;font-weight:700;letter-spacing:1.5px;color:var(--violet);margin-bottom:6px}
+.lms-feat-body{font-size:13px;color:var(--muted);line-height:1.6}
+.lms-spec{font-family:var(--fn-m);font-size:8px;color:rgba(139,92,246,.6);letter-spacing:1.5px;margin-top:8px;padding-top:8px;border-top:1px solid rgba(139,92,246,.15)}
+
+/* ============================================================
+   EXIT STRATEGY — BUSINESS VALUE
+   ============================================================ */
+.exit{
+  background:linear-gradient(135deg,#040A14,#060D1A);
+  border-top:1px solid var(--border-g);
+}
+.exit-inner{max-width:960px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.exit-text .s-eye{text-align:left}
+.exit-text .s-h{text-align:left;font-size:clamp(28px,4vw,52px)}
+.exit-text .s-h em{font-style:normal;color:var(--gold)}
+.exit-text p{font-size:14px;color:var(--muted);line-height:1.8;margin-bottom:16px}
+.exit-value-stack{display:flex;flex-direction:column;gap:14px}
+.ev-item{
+  background:rgba(212,160,23,.06);border:1px solid var(--border-g);
+  border-left:3px solid var(--gold);border-radius:var(--r);padding:16px 18px;
+}
+.ev-h{font-family:var(--fn-c);font-size:14px;font-weight:700;letter-spacing:1.5px;color:var(--gold);margin-bottom:4px}
+.ev-body{font-size:12px;color:var(--muted);line-height:1.5}
+.ev-num{font-family:var(--fn-d);font-size:28px;color:var(--gold);line-height:1;float:right;margin-left:12px}
+
+/* ============================================================
+   POWERED BY VITELITY API
+   ============================================================ */
+.infra{background:var(--space)}
+.infra-inner{max-width:960px;margin:0 auto}
+.api-stack{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+.api-card{
+  background:rgba(0,0,0,.3);border:1px solid var(--border-w);border-radius:var(--r);
+  padding:18px;text-align:center;transition:all .3s;
+}
+.api-card:hover{border-color:var(--border-b);background:var(--elec-dim)}
+.api-icon{font-size:24px;margin-bottom:8px}
+.api-name{font-family:var(--fn-c);font-size:13px;font-weight:700;letter-spacing:1.5px;color:var(--electric);margin-bottom:4px}
+.api-desc{font-size:11px;color:var(--muted);line-height:1.5}
+.api-label{font-family:var(--fn-m);font-size:8px;letter-spacing:2px;color:var(--muted);padding:2px 7px;border:1px solid var(--border-w);border-radius:20px;display:inline-block;margin-top:6px}
+
+.prepaid-note{
+  background:rgba(34,197,94,.07);border:1px solid rgba(34,197,94,.2);
+  border-radius:var(--r-lg);padding:24px 28px;margin-top:28px;
+  display:flex;gap:16px;align-items:flex-start;
+}
+.prepaid-note-icon{font-size:28px;flex-shrink:0}
+.prepaid-note-text strong{font-family:var(--fn-c);font-size:16px;letter-spacing:1.5px;color:var(--green);display:block;margin-bottom:6px}
+.prepaid-note-text p{font-size:13px;color:var(--muted);line-height:1.7}
+
+/* ============================================================
+   CLOSE — "SEE YOU AT THE TOP"
+   ============================================================ */
+.close-cta{
+  background:linear-gradient(135deg,var(--deep),var(--mid),var(--deep));
+  border-top:2px solid var(--gold);
+  text-align:center;padding:100px 40px;position:relative;overflow:hidden;
+}
+.close-cta::before{
+  content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  width:600px;height:600px;border-radius:50%;
+  background:radial-gradient(ellipse,rgba(212,160,23,.08),transparent 70%);
+  animation:closePulse 4s ease-in-out infinite;
+}
+@keyframes closePulse{0%,100%{transform:translate(-50%,-50%) scale(1)}50%{transform:translate(-50%,-50%) scale(1.15)}}
+.close-inner{position:relative;z-index:1;max-width:700px;margin:0 auto}
+.close-h{font-family:var(--fn-d);font-size:clamp(48px,9vw,110px);letter-spacing:4px;line-height:.9;margin-bottom:20px}
+.close-h .cg{color:var(--gold);text-shadow:0 0 60px rgba(212,160,23,.5)}
+.close-h .cw{color:var(--white)}
+.close-sub{font-size:18px;color:var(--muted);line-height:1.8;margin-bottom:36px;font-weight:300}
+.close-sub em{font-style:normal;color:var(--gold);font-weight:500}
+.close-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:36px}
+.close-did{font-family:var(--fn-d);font-size:clamp(24px,4vw,48px);letter-spacing:5px;color:var(--gold);text-shadow:0 0 40px rgba(212,160,23,.4);display:block;margin-bottom:8px}
+.close-did-sub{font-family:var(--fn-m);font-size:10px;letter-spacing:3px;color:var(--muted)}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+footer{
+  background:rgba(0,0,0,.7);border-top:1px solid var(--border-g);
+  padding:40px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:24px;
+}
+.foot-brand{display:flex;align-items:center;gap:10px}
+.foot-brand-text{font-family:var(--fn-d);font-size:18px;letter-spacing:4px;color:var(--gold)}
+.foot-brand-sub{font-family:var(--fn-m);font-size:7px;letter-spacing:3px;color:var(--muted);display:block;margin-top:2px}
+.foot-center{text-align:center}
+.foot-did a{font-family:var(--fn-d);font-size:20px;letter-spacing:4px;color:var(--gold);display:block}
+.foot-did span{font-family:var(--fn-m);font-size:8px;color:var(--muted);letter-spacing:2px}
+.foot-meta{text-align:right;font-size:10px;color:var(--muted);line-height:1.9}
+.foot-meta a{color:var(--muted);text-decoration:underline}
+
+/* ============================================================
+   ANIMATIONS
+   ============================================================ */
+@keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media(max-width:900px){
+  nav{padding:10px 16px}
+  .nav-links{display:none}
+  .hero{padding:80px 18px 48px;min-height:auto}
+  .hero-ring-3,.hero-ring-4,.hero-ring-5{display:none}
+  .hero h1{font-size:clamp(40px,12vw,72px)}
+  .hero-wordmark{font-size:clamp(40px,10vw,72px);letter-spacing:6px}
+  .first-last-grid{grid-template-columns:1fr}
+  .race-divider{flex-direction:row;padding:0;justify-content:center}
+  .nf-steps{grid-template-columns:repeat(2,1fr)}
+  .lms-stages{grid-template-columns:repeat(2,1fr)}
+  .sd-showcase{grid-template-columns:1fr}
+  .exit-inner{grid-template-columns:1fr}
+  .paradigm-detail{grid-template-columns:1fr}
+  footer{grid-template-columns:1fr;text-align:center}
+  .foot-meta{text-align:center}
+  .hero-kpis{flex-wrap:wrap}
+}
+</style>
+</head>
+<body>
+
+<!-- STAR FIELD -->
+<div class="star-field" id="stars"></div>
+
+<!-- ============================================================
+   NAV
+   ============================================================ -->
+<nav>
+  <div class="nav-logo-wrap">
+    <div class="nav-logo-core-sm">⚡</div>
+    <div style="margin-left:10px">
+      <div class="nav-tv-text">TELVERGENCE</div>
+      <span class="nav-tv-sub">DOMINATE FROM THE CLOUD</span>
+    </div>
+  </div>
+  <div class="nav-links">
+    <a href="#platform" class="nav-link">Platform</a>
+    <a href="#storm" class="nav-link">Storm Dispatch</a>
+    <a href="#network" class="nav-link">Network</a>
+    <a href="#lms" class="nav-link">Intelligence</a>
+    <a href="#exit" class="nav-link">Value</a>
+  </div>
+  <div class="nav-ctas">
+    <a href="#onboard" class="nav-btn nb-ghost">SIGN IN</a>
+    <a href="#onboard" class="nav-btn nb-gold"><span class="live-dot"></span>GET STARTED</a>
+  </div>
+</nav>
+
+<!-- ============================================================
+   HERO
+   ============================================================ -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+
+    <!-- PULSATING LOGO -->
+    <div class="hero-logo-wrap">
+      <div class="tv-logo-mark" style="width:300px;height:300px;display:flex;align-items:center;justify-content:center">
+        <div class="tv-logo-rings">
+          <div class="tv-ring hero-ring-1"></div>
+          <div class="tv-ring hero-ring-2"></div>
+          <div class="tv-ring hero-ring-3"></div>
+          <div class="tv-ring hero-ring-4"></div>
+          <div class="tv-ring hero-ring-5"></div>
+        </div>
+        <div class="tv-logo-core hero-logo-core">
+          <span class="tv-logo-bolt hero-logo-bolt">⚡</span>
+        </div>
+      </div>
+      <div class="hero-wordmark">TELVERGENCE</div>
+      <div class="hero-sub-wordmark">PROGRAMMABLE AI TELECOMMUNICATIONS · UCCPXaaS · DOMINATE FROM THE CLOUD</div>
+    </div>
+
+    <div class="urgency-chip"><span class="pulse"></span>FIRST ADOPTERS ONLY — EXCLUSIVE TERRITORIES FILLING NOW — LATE ADOPTERS WILL PURCHASE FROM YOU</div>
+
+    <h1>
+      <span class="h1-g">FIRST</span>
+      <span class="h1-w">MOVERS</span>
+      <span class="h1-e">OWN THE</span>
+      <span class="h1-v">CLOUD.</span>
+    </h1>
+    <div class="hero-rule"></div>
+    <p class="hero-sub">The AI telecom platform that eliminates your competition before they know the race has started.</p>
+    <p class="hero-detail">Telvergence is not a phone system. It is a total business operating system — custom-engineered to your industry, powered by AI, encrypted end-to-end, and built to make every competitor in your market dependent on you once they finally realize what you already knew. The window to be first is measured in weeks, not years.</p>
+
+    <div class="hero-ctas">
+      <a href="#onboard" class="btn-xl btn-gold-xl">CLAIM YOUR TERRITORY NOW</a>
+      <a href="#race" class="btn-xl btn-ghost-xl">THE RACE TO SINGULARITY →</a>
+    </div>
+
+    <div class="hero-kpis">
+      <div class="kpi"><div class="kpi-n" style="color:var(--gold)">ZERO</div><div class="kpi-l">Employees Required</div></div>
+      <div class="kpi-div"></div>
+      <div class="kpi"><div class="kpi-n" style="color:var(--green)">80%</div><div class="kpi-l">Net Margin Achievable</div></div>
+      <div class="kpi-div"></div>
+      <div class="kpi"><div class="kpi-n" style="color:var(--electric)">24/7</div><div class="kpi-l">Autonomous Operation</div></div>
+      <div class="kpi-div"></div>
+      <div class="kpi"><div class="kpi-n" style="color:var(--violet)">∞</div><div class="kpi-l">Scale Without Overhead</div></div>
+      <div class="kpi-div"></div>
+      <div class="kpi"><div class="kpi-n" style="color:var(--danger)">NOW</div><div class="kpi-l">Or Never</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+   THE RACE TO SINGULARITY
+   ============================================================ -->
+<section class="race" id="race">
+  <div class="race-inner">
+    <div class="s-eye" style="color:var(--danger)">The Race Has Already Started</div>
+    <div class="s-h" style="font-size:clamp(36px,7vw,88px)">FIRST. OR LAST.</div>
+    <p class="s-sub" style="color:rgba(255,255,255,.5)">There is no second place in a technology revolution. The contractor who adopts first becomes the wholesale provider to everyone who waits. This is not a metaphor. This is the documented pattern of every technology disruption in history. You are living it right now.</p>
+
+    <div class="countdown-strip">
+      <div class="cd-item"><div class="cd-n" id="cd-weeks">8</div><div class="cd-l">Weeks Left</div></div>
+      <div class="cd-item"><div class="cd-n" id="cd-territories">247</div><div class="cd-l">Territories</div></div>
+      <div class="cd-item"><div class="cd-n" id="cd-claimed">89</div><div class="cd-l">Already Claimed</div></div>
+      <div class="cd-item"><div class="cd-n" id="cd-open" style="color:var(--green)">158</div><div class="cd-l">Still Open</div></div>
+    </div>
+
+    <div class="first-last-grid">
+      <div class="adopter-col first">
+        <div class="adopter-head">✅ FIRST ADOPTER</div>
+        <div class="adopter-item"><span style="color:var(--green)">★</span>Owns the phone number in their market — forever</div>
+        <div class="adopter-item"><span style="color:var(--green)">★</span>AI answers every call before competitors wake up</div>
+        <div class="adopter-item"><span style="color:var(--green)">★</span>Positioned before the storm — capturing jobs pre-event</div>
+        <div class="adopter-item"><span style="color:var(--green)">★</span>Becomes the wholesale provider for late adopters in their vertical</div>
+        <div class="adopter-item"><span style="color:var(--green)">★</span>Business data compounds daily — grows more valuable every hour</div>
+        <div class="adopter-item"><span style="color:var(--green)">★</span>Zero employees, zero overhead — pure margin</div>
+        <div class="adopter-item"><span style="color:var(--green)">★</span>Builds a saleable, acquirable business asset while competitors build debt</div>
+        <div class="adopter-item"><span style="color:var(--green)">★</span>Controls the local market's customer experience standard</div>
+      </div>
+      <div class="race-divider">
+        <div class="race-vs">VS</div>
+        <div class="race-arrow">→</div>
+      </div>
+      <div class="adopter-col last">
+        <div class="adopter-head">❌ LATE ADOPTER</div>
+        <div class="adopter-item"><span style="color:var(--danger)">✗</span>Buys leads from the first adopter who got there first</div>
+        <div class="adopter-item"><span style="color:var(--danger)">✗</span>Misses 30–40% of calls while crews are on roofs</div>
+        <div class="adopter-item"><span style="color:var(--danger)">✗</span>Hears about storms on the news — same time as everyone else</div>
+        <div class="adopter-item"><span style="color:var(--danger)">✗</span>Pays lead marketplaces for homeowners who now expect AI response</div>
+        <div class="adopter-item"><span style="color:var(--danger)">✗</span>Carries fixed labor costs with unpredictable storm season revenue</div>
+        <div class="adopter-item"><span style="color:var(--danger)">✗</span>No data, no CRM, no intelligence — starting from zero every storm</div>
+        <div class="adopter-item"><span style="color:var(--danger)">✗</span>No exit. Nothing to sell. No retirement. No freedom.</div>
+        <div class="adopter-item"><span style="color:var(--danger)">✗</span>Eventually out of business or buying access from you</div>
+      </div>
+    </div>
+
+    <div class="singularity-quote">
+      <div class="sq-text">"The moment your AI system reaches <em>critical mass</em> — when it has handled enough calls, closed enough jobs, and learned enough patterns from your specific market — it begins improving itself faster than any human team could. The sum becomes greater than its parts. <em>That is the It Factor. That is Singularity.</em> And it is available to the first contractor in your market who activates today."</div>
+      <div class="sq-attr">— TELVERGENCE PLATFORM THESIS · 2026</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+   PLATFORM
+   ============================================================ -->
+<section class="platform" id="platform">
+  <div class="s-eye">The Platform</div>
+  <div class="s-h">YOUR ENTIRE BUSINESS.<br>IN THE CLOUD.</div>
+  <p class="s-sub">Telvergence is not software you buy. It is an intelligence layer you activate — custom-configured to your industry's specific workflows, your market's geography, and your competitive position. Once live, it never sleeps, never quits, and never makes the same mistake twice.</p>
+  <div class="max">
+    <div class="platform-grid">
+      <div class="plat-card gold">
+        <div class="pc-icon">📞</div>
+        <div class="pc-h">SMART DID NETWORK</div>
+        <div class="pc-body">Every Telvergence subscriber gets a vanity Smart DID — a telephone number matched to your highest-traffic SEO keywords. It is simultaneously a voice line, an SMS port, an AI agent front door, and a data collection node feeding your LMS in real time. Powered by our wholesale carrier network covering 11,000+ rate centers nationwide. This number is yours permanently.</div>
+        <span class="pc-badge">11,000+ RATE CENTERS · VANITY MATCHED · SMS ENABLED</span>
+      </div>
+      <div class="plat-card elec">
+        <div class="pc-icon">🤖</div>
+        <div class="pc-h">AI VOICE AGENT SYSTEM</div>
+        <div class="pc-body">Your 24/7 AI receptionist, salesperson, dispatcher, and appointment scheduler — custom-scripted to your exact business workflows. It answers every call to your Smart DID with zero latency, qualifies prospects in real time, books appointments, and routes emergencies — all without human intervention. The longer it operates, the sharper it gets. 98% answer rate. Zero voicemail. Zero missed revenue.</div>
+        <span class="pc-badge">24/7 · ZERO VOICEMAIL · SELF-IMPROVING</span>
+      </div>
+      <div class="plat-card vio">
+        <div class="pc-icon">🧠</div>
+        <div class="pc-h">LMS — LEARNING MANAGEMENT SYSTEM</div>
+        <div class="pc-body">Every call, text, appointment, job, and customer interaction is automatically captured, categorized, and backfilled into your company's Living Intelligence System. Unlike a static CRM, your LMS grows smarter with every interaction. As your dataset reaches critical mass, the system begins identifying patterns, predicting outcomes, and optimizing your customer experience autonomously. Your data becomes your most valuable business asset.</div>
+        <span class="pc-badge">AUTO-CAPTURE · SELF-TRAINING · IoT / BIG DATA</span>
+      </div>
+      <div class="plat-card green">
+        <div class="pc-icon">⚡</div>
+        <div class="pc-h">AUTONOMOUS OPERATIONS</div>
+        <div class="pc-body">No billing department. No collections team. No IT staff. No office. Telvergence operates on a fully autonomous pre-paid model — clients add funds through the app or web portal and every service activates, scales, and manages itself automatically. Our wholesale carrier provides free billing infrastructure. You collect revenue in your sleep. The system runs the business so you can run your life.</div>
+        <span class="pc-badge">PREPAID · ZERO OVERHEAD · RUNS ITSELF</span>
+      </div>
+      <div class="plat-card gold">
+        <div class="pc-icon">🔒</div>
+        <div class="pc-h">MILITARY-GRADE SECURITY</div>
+        <div class="pc-body">AES-256-GCM end-to-end encryption on all voice and messaging. RSA-4096 device-resident key pairs. Blockchain-verified document logs on Polygon PoS. Zero-knowledge architecture — not even Telvergence can read your client communications. Free E-911 registration with FCC Phase II compliance. Your network is more secure than your bank.</div>
+        <span class="pc-badge">AES-256 · BLOCKCHAIN · E-911 · SATELLITE FALLBACK</span>
+      </div>
+      <div class="plat-card elec">
+        <div class="pc-icon">🌐</div>
+        <div class="pc-h">WHITE LABEL & RESELLER ENGINE</div>
+        <div class="pc-body">Every Telvergence subscriber is automatically a potential white-label partner. Regional licensees become the wholesale providers for their vertical in their market. Build your own sub-network of contractors, route leads to them automatically, collect recurring subscription revenue from each partner you onboard — all without touching a single call or managing a single employee. You become the platform.</div>
+        <span class="pc-badge">WHITE LABEL · RESELLER RIGHTS · CONSORTIUM NETWORK</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+   PARADIGM SHIFT
+   ============================================================ -->
+<section class="paradigm">
+  <div class="paradigm-inner">
+    <div class="s-eye">The Transformation</div>
+    <div class="s-h">THE PROFIT PARADIGM SHIFT</div>
+    <p class="s-sub">The average service contractor operates on a 20% net margin after paying for employees, vehicles, insurance, office space, and lead generation. Telvergence eliminates most of those costs. What was overhead becomes profit. What was expense becomes freedom.</p>
+
+    <div class="shift-visual">
+      <div class="shift-block">
+        <div class="shift-label">BEFORE TELVERGENCE</div>
+        <div class="shift-pct before">20%</div>
+        <div class="shift-desc">Net profit after<br>employees, overhead,<br>leads, and lost calls</div>
+      </div>
+      <div class="shift-arrow">→</div>
+      <div class="shift-block">
+        <div class="shift-label">AFTER TELVERGENCE</div>
+        <div class="shift-pct after">80%</div>
+        <div class="shift-desc">Net margin when AI<br>eliminates fixed costs<br>and automates revenue</div>
+      </div>
+    </div>
+
+    <div class="paradigm-detail">
+      <div class="pd-col costs">
+        <div class="pd-col-h">❌ COSTS ELIMINATED</div>
+        <div class="pd-item"><span style="color:var(--danger)">⊗</span>Receptionist / dispatcher salary: <strong>$40,000–$65,000/yr</strong></div>
+        <div class="pd-item"><span style="color:var(--danger)">⊗</span>Lead marketplace fees: <strong>$800–$2,000/month</strong></div>
+        <div class="pd-item"><span style="color:var(--danger)">⊗</span>Office space and utilities: <strong>$1,500–$4,000/month</strong></div>
+        <div class="pd-item"><span style="color:var(--danger)">⊗</span>CRM / scheduling software stack: <strong>$500–$1,500/month</strong></div>
+        <div class="pd-item"><span style="color:var(--danger)">⊗</span>Missed call revenue loss: <strong>$15,000–$60,000/storm season</strong></div>
+        <div class="pd-item"><span style="color:var(--danger)">⊗</span>Marketing agency retainer: <strong>$2,000–$8,000/month</strong></div>
+        <div class="pd-item"><span style="color:var(--danger)">⊗</span>Human error, liability, turnover: <strong>Incalculable</strong></div>
+      </div>
+      <div class="pd-col gains">
+        <div class="pd-col-h">✅ WHAT REPLACES THEM</div>
+        <div class="pd-item"><span style="color:var(--green)">✓</span>AI agent — answers every call for <strong>$0.02–$0.04/min</strong></div>
+        <div class="pd-item"><span style="color:var(--green)">✓</span>Smart DID network — owns your leads, no per-lead fees</div>
+        <div class="pd-item"><span style="color:var(--green)">✓</span>Cloud infrastructure — no physical office required</div>
+        <div class="pd-item"><span style="color:var(--green)">✓</span>LMS — replaces entire CRM/scheduling stack, self-managing</div>
+        <div class="pd-item"><span style="color:var(--green)">✓</span>Pre-storm positioning — captures jobs before the storm hits</div>
+        <div class="pd-item"><span style="color:var(--green)">✓</span>SEO-matched DIDs — organic inbound from your number itself</div>
+        <div class="pd-item"><span style="color:var(--green)">✓</span>AI never quits, never calls in sick, never makes the same mistake twice</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+   STORM DISPATCH — FEATURED VERTICAL
+   ============================================================ -->
+<section class="storm-vertical" id="storm">
+  <div class="s-eye">Flagship Vertical</div>
+  <div class="s-h">STORM DISPATCH — THE FIRST VERTICAL</div>
+  <p class="s-sub">Storm Dispatch is Telvergence's first industry-specific deployment — a complete storm restoration intelligence and lead generation system for roofing and restoration contractors. It is the proof of concept for every vertical that follows.</p>
+
+  <div class="sd-showcase">
+    <div class="sd-left">
+      <div class="s-eye" style="text-align:left;color:var(--electric)">Telvergence Vertical #001</div>
+      <div class="s-h" style="text-align:left;font-size:clamp(28px,4vw,48px)">⚡ STORM DISPATCH</div>
+      <p>Storm Dispatch transforms a roofing company from a reactive crew answering calls into a pre-positioned storm intelligence platform that sees weather events 5–7 days in advance, fires outreach campaigns automatically, and closes inspection appointments before the first hailstone hits the ground.</p>
+      <p>The homeowner calls 1-800-THE-CREW and is immediately inside a fully automated, AI-driven experience that books their inspection, captures their insurance data, and routes their job to the nearest qualified crew — all without a single human employee touching the transaction.</p>
+      <p style="color:var(--gold);font-family:var(--fn-c);font-size:16px;font-weight:700;letter-spacing:1px">This is what every vertical in the Telvergence ecosystem will look like. Storm Dispatch is the blueprint.</p>
+      <div class="sd-badge-row">
+        <span class="sd-badge">AI VOICE AGENTS</span>
+        <span class="sd-badge">WEATHER INTELLIGENCE</span>
+        <span class="sd-badge">SMART DID NETWORK</span>
+        <span class="sd-badge">BLOCKCHAIN DOCS</span>
+        <span class="sd-badge">E-911 REGISTERED</span>
+      </div>
+      <a href="stormdispatch.com" class="sd-cta">VISIT STORMDISPATCH.COM →</a>
+    </div>
+    <div class="sd-metrics">
+      <div class="sd-metric"><div class="sdm-n" style="color:var(--electric)">5–7</div><div class="sdm-l">Days Advance Storm Intel</div></div>
+      <div class="sd-metric"><div class="sdm-n">98%</div><div class="sdm-l">AI Answer Rate</div></div>
+      <div class="sd-metric"><div class="sdm-n" style="color:var(--green)">$5.6M+</div><div class="sdm-l">Projected Season Revenue</div></div>
+      <div class="sd-metric"><div class="sdm-n" style="color:var(--violet)">$0</div><div class="sdm-l">Lead Marketplace Fees</div></div>
+      <div class="sd-metric"><div class="sdm-n" style="color:var(--gold)">60s</div><div class="sdm-l">Dispatch Mobilization</div></div>
+      <div class="sd-metric"><div class="sdm-n" style="color:var(--danger)">∞</div><div class="sdm-l">Scale Without Overhead</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+   NETWORK — VENDOR AUTO-ONBOARDING
+   ============================================================ -->
+<section class="network" id="network">
+  <div class="s-eye">The Consortium Network</div>
+  <div class="s-h">AUTO-ONBOARD YOUR ENTIRE<br>VENDOR NETWORK IN SECONDS</div>
+  <p class="s-sub">When a fresh lead comes into your Smart DID and your vertical cannot service it, Telvergence automatically identifies the nearest qualified network partner, delivers the lead as a free gesture of good faith, and onboards them into your sub-partner ecosystem — all in a single automated text string. One tap. They are in your network. You own the relationship.</p>
+
+  <div class="network-flow">
+    <div class="nf-steps">
+      <div class="nf-step">
+        <div class="nf-num">01</div>
+        <div class="nf-h">LEAD ARRIVES</div>
+        <div class="nf-body">Fresh lead calls your Smart DID. AI qualifies the job. ZIP code identified. Nearest qualified vendor in your network directory located automatically via geolocation algorithm.</div>
+        <span class="nf-badge">REAL-TIME · AUTOMATED</span>
+      </div>
+      <div class="nf-step">
+        <div class="nf-num">02</div>
+        <div class="nf-h">TCPA TEXT SENT</div>
+        <div class="nf-body">Vendor receives a single SMS with the lead details and a TCPA-compliant opt-in link. One tap confirms consent. They are immediately in your network under your terms. Fully FCC compliant.</div>
+        <span class="nf-badge">TCPA COMPLIANT · ONE TAP</span>
+      </div>
+      <div class="nf-step">
+        <div class="nf-num">03</div>
+        <div class="nf-h">APP DOWNLOAD LINK</div>
+        <div class="nf-body">A second automated text delivers their personalized App download link. One tap installs the Telvergence app under your white-label brand. Their Smart DID begins activating immediately.</div>
+        <span class="nf-badge">AUTO-PROVISIONED · INSTANT</span>
+      </div>
+      <div class="nf-step">
+        <div class="nf-num">04</div>
+        <div class="nf-h">DID ACTIVATED</div>
+        <div class="nf-body">Their new Smart DID is live within 60 seconds. E-911 registered. Encryption active. The lead data populates directly in their App CRM scheduler — ready for their first call-back. Satellite fallback armed.</div>
+        <span class="nf-badge">60 SECONDS · E-911 FREE</span>
+      </div>
+      <div class="nf-step">
+        <div class="nf-num">05</div>
+        <div class="nf-h">YOU EARN RECURRING</div>
+        <div class="nf-body">Every new vendor you onboard this way becomes a paying sub-partner on your platform. You collect 70% of their monthly subscription. They get leads. You get passive income. Zero human effort on your part.</div>
+        <span class="nf-badge">70% REVENUE SHARE</span>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top:48px">
+    <div class="s-eye">Every General Contracting Vertical</div>
+    <div style="font-family:var(--fn-d);font-size:clamp(24px,4vw,42px);letter-spacing:2px;text-align:center;margin-bottom:28px">YOUR PRIVATE PROVIDER DIRECTORY</div>
+    <p class="s-sub">Like a TeleDoc network for your industry — every qualified specialist reachable on-net through your private communications backbone, automatically routing to the closest available expert the moment a matching lead arrives.</p>
+    <div class="max">
+      <div class="verticals-list">
+        <div class="vert-chip"><div class="vert-chip-icon">🏠</div><div><div class="vert-chip-title">ROOFING</div><div class="vert-chip-sub">Storm dispatch flagship</div></div><span class="vert-chip-badge vc-b-gold">FLAGSHIP</span></div>
+        <div class="vert-chip"><div class="vert-chip-icon">💧</div><div><div class="vert-chip-title">WATER DAMAGE</div><div class="vert-chip-sub">Flood remediation network</div></div><span class="vert-chip-badge vc-b-elec">ACTIVE</span></div>
+        <div class="vert-chip"><div class="vert-chip-icon">🍄</div><div><div class="vert-chip-title">MOLD MITIGATION</div><div class="vert-chip-sub">Long-tail revenue stream</div></div><span class="vert-chip-badge vc-b-elec">ACTIVE</span></div>
+        <div class="vert-chip"><div class="vert-chip-icon">🔥</div><div><div class="vert-chip-title">FIRE & SMOKE</div><div class="vert-chip-sub">Highest ticket vertical</div></div><span class="vert-chip-badge vc-b-gold">PREMIUM</span></div>
+        <div class="vert-chip"><div class="vert-chip-icon">🏗️</div><div><div class="vert-chip-title">CONCRETE & FOUNDATION</div><div class="vert-chip-sub">Low competition, high margin</div></div><span class="vert-chip-badge vc-b-elec">ACTIVE</span></div>
+        <div class="vert-chip"><div class="vert-chip-icon">⚡</div><div><div class="vert-chip-title">ELECTRICAL & HVAC</div><div class="vert-chip-sub">Downstream rebuild revenue</div></div><span class="vert-chip-badge vc-b-elec">ACTIVE</span></div>
+        <div class="vert-chip"><div class="vert-chip-icon">🪟</div><div><div class="vert-chip-title">WINDOWS & SIDING</div><div class="vert-chip-sub">Natural roofing upsell</div></div><span class="vert-chip-badge vc-b-gold">UPSELL</span></div>
+        <div class="vert-chip"><div class="vert-chip-icon">🌿</div><div><div class="vert-chip-title">TREE & DEBRIS</div><div class="vert-chip-sub">First on scene — first to refer</div></div><span class="vert-chip-badge vc-b-elec">ACTIVE</span></div>
+        <div class="vert-chip"><div class="vert-chip-icon">🔧</div><div><div class="vert-chip-title">PLUMBING</div><div class="vert-chip-sub">Water damage downstream</div></div><span class="vert-chip-badge vc-b-gold">COMING</span></div>
+        <div class="vert-chip"><div class="vert-chip-icon">🏥</div><div><div class="vert-chip-title">HEALTH & WELLNESS</div><div class="vert-chip-sub">TeleDoc on-network model</div></div><span class="vert-chip-badge vc-b-gold">COMING</span></div>
+        <div class="vert-chip"><div class="vert-chip-icon">⚖️</div><div><div class="vert-chip-title">LEGAL SERVICES</div><div class="vert-chip-sub">Insurance claim attorneys</div></div><span class="vert-chip-badge vc-b-gold">COMING</span></div>
+        <div class="vert-chip"><div class="vert-chip-icon">➕</div><div><div class="vert-chip-title">YOUR VERTICAL</div><div class="vert-chip-sub">Any service business with dispatch</div></div><span class="vert-chip-badge vc-b-gold">APPLY NOW</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+   LMS / INTELLIGENCE / SINGULARITY
+   ============================================================ -->
+<section class="lms" id="lms">
+  <div class="lms-inner">
+    <div class="s-eye">The Intelligence Engine</div>
+    <div class="s-h">FROM DATA TO DOMINANCE.<br>THE LIVING SYSTEM.</div>
+    <p class="s-sub">Every other business tool captures data. Telvergence's Living Management System uses it. The more your system operates, the smarter it becomes — autonomously improving every customer interaction while simultaneously increasing your company's efficiency and market value. This is the Internet of Things applied to your business. This is the path to Singularity.</p>
+
+    <div class="max">
+      <div class="lms-stages">
+        <div class="lms-stage">
+          <div class="lms-stage-icon">📥</div>
+          <div class="lms-stage-n">01</div>
+          <div class="lms-stage-h">DATA CAPTURE</div>
+          <div class="lms-stage-body">Every call, text, appointment, job, photo, insurance doc, and customer response is auto-captured and fed into your LMS in real time. No manual entry. No human touch.</div>
+        </div>
+        <div class="lms-stage">
+          <div class="lms-stage-icon">🔄</div>
+          <div class="lms-stage-n">02</div>
+          <div class="lms-stage-h">PATTERN RECOGNITION</div>
+          <div class="lms-stage-body">The system identifies what works: which keywords convert, which scripts book, which follow-up timing closes — all without a consultant or analyst. It learns your market specifically.</div>
+        </div>
+        <div class="lms-stage">
+          <div class="lms-stage-icon">⚡</div>
+          <div class="lms-stage-n">03</div>
+          <div class="lms-stage-h">AUTONOMOUS OPTIMIZATION</div>
+          <div class="lms-stage-body">The system applies learned patterns on the fly — updating scripts, adjusting routing, modifying follow-up sequences — in real time, without human instruction, at any scale.</div>
+        </div>
+        <div class="lms-stage" style="position:relative">
+          <div class="critical-mass-badge">CRITICAL MASS</div>
+          <div class="lms-stage-icon">🌌</div>
+          <div class="lms-stage-n">04</div>
+          <div class="lms-stage-h">SINGULARITY</div>
+          <div class="lms-stage-body">The sum becomes greater than the parts. Your system now generates value faster than you spend it. The It Factor. Pixie Dust. The Secret Sauce. Your exit strategy is now real and bankable.</div>
+        </div>
+      </div>
+
+      <div class="lms-features">
+        <div class="lms-feat">
+          <div class="lms-feat-icon">🌐</div>
+          <div class="lms-feat-h">IoT — INTERNET OF THINGS</div>
+          <div class="lms-feat-body">Every Smart DID number is a data collection node. Every call is a data point. Every job completion is a feedback signal. Your business becomes a living data network — with your company at the center of every transaction in your market. The bigger the network, the more valuable every node becomes.</div>
+          <div class="lms-spec">CONNECTED NODES · REAL-TIME FEEDS · NETWORK EFFECTS</div>
+        </div>
+        <div class="lms-feat">
+          <div class="lms-feat-icon">📊</div>
+          <div class="lms-feat-h">BIG DATA → COMPETITIVE INTEL</div>
+          <div class="lms-feat-body">As your dataset grows, your LMS begins to understand your market better than anyone in it — including competitors who have been operating for decades. It knows peak call times, storm response windows, optimal pricing moments, and which homeowners are highest-probability buyers before they call anyone. You operate in the future while competitors operate in the past.</div>
+          <div class="lms-spec">PREDICTIVE ANALYTICS · MARKET INTELLIGENCE · REAL-TIME</div>
+        </div>
+        <div class="lms-feat">
+          <div class="lms-feat-icon">💎</div>
+          <div class="lms-feat-h">YOUR DATA IS YOUR EQUITY</div>
+          <div class="lms-feat-body">Traditional contractors sell their business based on revenue and equipment. A Telvergence-powered business sells based on something far more valuable: its data, its AI system, its customer base, and its exclusive market position. A buyer is not acquiring a truck and some ladders — they are acquiring a self-operating revenue machine with a moat around its market. That commands a premium multiplier at acquisition.</div>
+          <div class="lms-spec">EXIT MULTIPLIER · ACQUIRABLE ASSET · BANKABLE EQUITY</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+   EXIT STRATEGY
+   ============================================================ -->
+<section class="exit" id="exit">
+  <div class="exit-inner">
+    <div class="exit-text">
+      <div class="s-eye" style="text-align:left">The End Goal</div>
+      <div class="s-h" style="text-align:left">Build It.<br>Run It.<br><em>Sell It.</em></div>
+      <p>The American Dream is not working 80-hour weeks for 40 years and hoping someone buys your truck. It is building a system that generates compounding value every day, then selling that system to someone who wants what you built — and retiring to your family with the proceeds.</p>
+      <p>Telvergence gives every subscriber the tools to do exactly that. By becoming an early adopter, automating your operations, accumulating customer data, and owning an exclusive market territory — you are building an acquirable asset from day one. Every interaction your AI handles makes that asset more valuable.</p>
+      <p>Your competitor who waits two years will either buy access from you or go out of business. <strong style="color:var(--gold)">You are not competing with them. You are building the infrastructure they will eventually pay you to use.</strong></p>
+      <p style="font-family:var(--fn-c);font-size:20px;font-weight:700;letter-spacing:1px;color:var(--gold)">Time is money. But speed is profit. See you at the top.</p>
+    </div>
+    <div class="exit-value-stack">
+      <div class="ev-item">
+        <div class="ev-num">×4–8</div>
+        <div class="ev-h">Revenue Multiplier at Sale</div>
+        <div class="ev-body">AI-operated, data-rich service businesses with exclusive territories command 4–8× revenue at acquisition vs 1–2× for traditional contractors.</div>
+      </div>
+      <div class="ev-item">
+        <div class="ev-num">∞</div>
+        <div class="ev-h">Compounding Data Value</div>
+        <div class="ev-body">Every day your LMS operates, your company's data asset grows. There is no ceiling on the value of a self-improving intelligence system with an exclusive market position.</div>
+      </div>
+      <div class="ev-item">
+        <div class="ev-num">$0</div>
+        <div class="ev-h">Overhead to Maintain</div>
+        <div class="ev-body">A Telvergence-powered business requires no employees, no office, and no physical infrastructure to operate. Your margin is your enterprise value. Pure and portable.</div>
+      </div>
+      <div class="ev-item">
+        <div class="ev-num">1</div>
+        <div class="ev-h">Territory Per Market</div>
+        <div class="ev-body">Exclusivity makes scarcity. Scarcity makes value. One contractor per NPA-NXX per vertical means your market position cannot be replicated or underbid. It can only be acquired from you.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+   INFRASTRUCTURE — VITELITY API
+   ============================================================ -->
+<section class="infra">
+  <div class="infra-inner">
+    <div class="s-eye">Carrier Infrastructure</div>
+    <div class="s-h">ENTERPRISE BACKBONE.<br>ZERO CARRIER OVERHEAD.</div>
+    <p class="s-sub">Telvergence is built on the same wholesale carrier infrastructure used by major telecommunications resellers nationwide — 11,000+ rate centers, pre-paid API billing, free collections, and fully autonomous account management. You access wholesale rates. You charge retail. The spread is yours.</p>
+
+    <div class="api-stack">
+      <div class="api-card"><div class="api-icon">📞</div><div class="api-name">VoIP ORIGINATION</div><div class="api-desc">Inbound call routing to any SIP endpoint, app, or AI agent. Local, toll-free, and international DID coverage.</div><span class="api-label">API ENABLED</span></div>
+      <div class="api-card"><div class="api-icon">📡</div><div class="api-name">GLOBAL TERMINATION</div><div class="api-desc">A-Z international outbound routing. Wholesale rates. Carrier-grade quality on all termination paths.</div><span class="api-label">WHOLESALE RATES</span></div>
+      <div class="api-card"><div class="api-icon">💬</div><div class="api-name">SMS ON ALL DIDS</div><div class="api-desc">Two-way SMS text capability included on every DID at no extra charge. Campaign automation ready.</div><span class="api-label">INCLUDED FREE</span></div>
+      <div class="api-card"><div class="api-icon">🏢</div><div class="api-name">HOSTED PBX</div><div class="api-desc">Cloud PBX with full feature set — extensions, ring groups, IVR, voicemail, recording, analytics.</div><span class="api-label">CLOUD NATIVE</span></div>
+      <div class="api-card"><div class="api-icon">📠</div><div class="api-name">VIRTUAL FAX</div><div class="api-desc">vFAX on any DID for insurance documentation, permit filing, and contractor compliance workflows.</div><span class="api-label">INSURANCE READY</span></div>
+      <div class="api-card"><div class="api-icon">🔢</div><div class="api-name">DID INVENTORY</div><div class="api-desc">11,000+ rate centers. Local, vanity, toll-free, and international DIDs. Real-time availability via API.</div><span class="api-label">11,000+ CENTERS</span></div>
+    </div>
+
+    <div class="prepaid-note">
+      <div class="prepaid-note-icon">💳</div>
+      <div class="prepaid-note-text">
+        <strong>100% PREPAID — ZERO COLLECTIONS — AUTONOMOUS BILLING</strong>
+        <p>Every Telvergence service operates on a prepaid balance model. End users add funds through the app or web portal. When their balance depletes, services pause until funds are added — no invoicing, no collections, no bad debt, no billing department. Carrier-provided free billing infrastructure handles all account management, usage tracking, and fund processing automatically. Your business generates revenue before you deliver service. Every time. No exceptions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+   ONBOARDING
+   ============================================================ -->
+<section style="background:var(--mid);padding:80px 40px" id="onboard">
+  <div class="s-eye">Activate Today</div>
+  <div class="s-h">CLAIM YOUR TERRITORY</div>
+  <p class="s-sub">One business per market. First to activate owns the territory. Fill out your information and a Telvergence activation specialist will contact you within 24 hours to confirm your exclusive NPA-NXX assignment and begin onboarding.</p>
+  <div style="max-width:680px;margin:0 auto;background:rgba(255,255,255,.03);border:1px solid var(--border-g);border-radius:var(--r-lg);padding:40px">
+    <div id="ob-success" style="display:none;text-align:center;padding:32px">
+      <div style="font-size:56px;margin-bottom:14px">⚡</div>
+      <div style="font-family:var(--fn-d);font-size:36px;letter-spacing:2px;color:var(--gold);margin-bottom:10px">TERRITORY CLAIM RECEIVED</div>
+      <p style="font-size:15px;color:var(--muted);line-height:1.7">Your exclusive territory is being held for 48 hours. A Telvergence activation specialist will call you within 24 hours. Welcome to the cloud.</p>
+      <p id="ob-ref" style="font-family:var(--fn-m);font-size:10px;color:var(--electric);margin-top:14px"></p>
+    </div>
+    <form id="ob-form">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px">
+        <div><label style="font-family:var(--fn-m);font-size:9px;letter-spacing:2px;color:var(--muted);text-transform:uppercase;display:block;margin-bottom:5px">First Name *</label><input type="text" id="ob-fn" required placeholder="First name" style="width:100%;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);color:var(--white);border-radius:var(--r);padding:12px 14px;font-size:14px;font-family:var(--fn-b)"></div>
+        <div><label style="font-family:var(--fn-m);font-size:9px;letter-spacing:2px;color:var(--muted);text-transform:uppercase;display:block;margin-bottom:5px">Last Name *</label><input type="text" id="ob-ln" required placeholder="Last name" style="width:100%;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);color:var(--white);border-radius:var(--r);padding:12px 14px;font-size:14px;font-family:var(--fn-b)"></div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px">
+        <div><label style="font-family:var(--fn-m);font-size:9px;letter-spacing:2px;color:var(--muted);text-transform:uppercase;display:block;margin-bottom:5px">Mobile *</label><input type="tel" id="ob-mob" required placeholder="(555) 000-0000" style="width:100%;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);color:var(--white);border-radius:var(--r);padding:12px 14px;font-size:14px;font-family:var(--fn-b)"></div>
+        <div><label style="font-family:var(--fn-m);font-size:9px;letter-spacing:2px;color:var(--muted);text-transform:uppercase;display:block;margin-bottom:5px">Email *</label><input type="email" id="ob-em" required placeholder="you@company.com" style="width:100%;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);color:var(--white);border-radius:var(--r);padding:12px 14px;font-size:14px;font-family:var(--fn-b)"></div>
+      </div>
+      <div style="margin-bottom:14px"><label style="font-family:var(--fn-m);font-size:9px;letter-spacing:2px;color:var(--muted);text-transform:uppercase;display:block;margin-bottom:5px">Company & Market *</label><input type="text" id="ob-co" required placeholder="Company name + city/state or area code" style="width:100%;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);color:var(--white);border-radius:var(--r);padding:12px 14px;font-size:14px;font-family:var(--fn-b)"></div>
+      <div style="margin-bottom:14px"><label style="font-family:var(--fn-m);font-size:9px;letter-spacing:2px;color:var(--muted);text-transform:uppercase;display:block;margin-bottom:5px">Primary Vertical</label><select id="ob-vert" style="width:100%;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);color:var(--white);border-radius:var(--r);padding:12px 14px;font-size:14px;font-family:var(--fn-b)"><option value="">Select your vertical...</option><option>Roofing / Storm Dispatch</option><option>Water Damage</option><option>Mold Mitigation</option><option>Fire &amp; Smoke</option><option>Multi-Vertical / Full Consortium</option><option>Other Service Business</option></select></div>
+      <div style="display:flex;align-items:flex-start;gap:9px;font-size:12px;color:var(--muted);margin-bottom:20px;line-height:1.5"><input type="checkbox" id="ob-c" required style="width:auto;margin-top:3px;accent-color:var(--gold)"><label for="ob-c">I agree to be contacted by Telvergence regarding my territory claim and platform activation. I understand this is a prepaid service and territory exclusivity is first-come, first-served.</label></div>
+      <button type="submit" style="width:100%;background:var(--gold);color:var(--void);font-family:var(--fn-d);font-size:24px;letter-spacing:3px;padding:18px;border-radius:var(--r);border:none;cursor:pointer;transition:all .3s" onmouseover="this.style.background='#F0C842'" onmouseout="this.style.background='var(--gold)'">⚡ CLAIM MY TERRITORY NOW</button>
+    </form>
+  </div>
+</section>
+
+<!-- ============================================================
+   CLOSE
+   ============================================================ -->
+<section class="close-cta">
+  <div class="close-inner">
+    <div class="close-h">
+      <span class="cg">SEE YOU</span><br>
+      <span class="cw">AT THE</span><br>
+      <span class="cg">TOP.</span>
+    </div>
+    <p class="close-sub">The race to Singularity is not won by the biggest company. It is won by the <em>fastest adopter</em>. You are reading this before your competitor. That window is closing. In two months it will be too late to be first. Right now, it is still possible.</p>
+    <div class="close-btns">
+      <a href="#onboard" class="btn-xl btn-gold-xl">ACTIVATE NOW</a>
+    </div>
+    <a href="tel:18008432739" class="close-did">1-800-THE-CREW</a>
+    <div class="close-did-sub">CALL OR TEXT 24/7 · AI AGENT ACTIVE · TELVERGENCE NETWORK</div>
+  </div>
+</section>
+
+<!-- ============================================================
+   FOOTER
+   ============================================================ -->
+<footer>
+  <div class="foot-brand">
+    <div class="nav-logo-core-sm">⚡</div>
+    <div style="margin-left:10px">
+      <div class="foot-brand-text">TELVERGENCE</div>
+      <span class="foot-brand-sub">UCCPXaaS · AI TELECOM · DOMINATE FROM THE CLOUD</span>
+    </div>
+  </div>
+  <div class="foot-center">
+    <div class="foot-did"><a href="tel:18008432739">1-800-THE-CREW</a><span>CALL OR TEXT 24/7/365</span></div>
+    <div style="font-family:var(--fn-m);font-size:8px;color:var(--green);letter-spacing:2px;margin-top:6px"><span class="live-dot"></span>AI AGENT ACTIVE</div>
+  </div>
+  <div class="foot-meta">
+    <div>Telvergence LLC · Orlando, FL</div>
+    <div>Storm Dispatch™ · Smart DID Network™ · LMS™</div>
+    <div><a href="#">Privacy</a> · <a href="#">Terms</a> · <a href="#">Partner Agreement</a></div>
+    <div>© 2026 Telvergence LLC. All rights reserved.</div>
+    <div style="color:rgba(139,92,246,.4);font-size:8px;letter-spacing:1px;margin-top:4px">POWERED BY WHOLESALE CARRIER API · VITELITY INFRASTRUCTURE</div>
+  </div>
+</footer>
+
+<script>
+// Generate star field
+(function(){
+  const sf = document.getElementById('stars');
+  for(let i=0;i<180;i++){
+    const s = document.createElement('div');
+    s.className = 'star';
+    const size = Math.random()*2+.5;
+    s.style.cssText = `width:${size}px;height:${size}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--tw:${Math.random()*4+2}s;--td:${Math.random()*4}s;--minop:${Math.random()*.15+.05};--maxop:${Math.random()*.7+.3}`;
+    sf.appendChild(s);
+  }
+})();
+
+// Animate territory counter
+(function(){
+  const claimed = document.getElementById('cd-claimed');
+  const open = document.getElementById('cd-open');
+  let c = 89;
+  setInterval(()=>{
+    if(Math.random()<.3 && c<200){
+      c++;
+      claimed.textContent=c;
+      open.textContent=247-c;
+    }
+  },4000);
+})();
+
+// Phone formatter
+document.getElementById('ob-mob')?.addEventListener('input',function(){
+  let v=this.value.replace(/\D/g,'').substring(0,10);
+  if(v.length>=6)this.value=`(${v.substring(0,3)}) ${v.substring(3,6)}-${v.substring(6)}`;
+  else if(v.length>=3)this.value=`(${v.substring(0,3)}) ${v.substring(3)}`;
+  else this.value=v;
+});
+
+// Form submit
+document.getElementById('ob-form')?.addEventListener('submit',async e=>{
+  e.preventDefault();
+  const btn=e.target.querySelector('button[type=submit]');
+  btn.textContent='SECURING TERRITORY...';btn.disabled=true;
+  await new Promise(r=>setTimeout(r,1600));
+  const ts=Date.now().toString(36).toUpperCase();
+  const rand=Math.random().toString(36).substring(2,7).toUpperCase();
+  document.getElementById('ob-form').style.display='none';
+  document.getElementById('ob-success').style.display='block';
+  document.getElementById('ob-ref').textContent=`Territory Ref: TVG-${ts}-${rand} · Held 48 Hours · Activation Call Within 24 Hours`;
+});
+
+// Scroll reveal
+const io=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.style.animation='fadeUp .55s ease forwards';io.unobserve(x.target);}})},{threshold:.08});
+document.querySelectorAll('.plat-card,.lms-feat,.ev-item,.api-card,.vert-chip,.nf-step,.lms-stage,.adopter-col,.sd-metric').forEach(el=>{el.style.opacity='0';io.observe(el);});
+</script>
+</body>
+</html>
