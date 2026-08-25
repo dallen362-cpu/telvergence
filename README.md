@@ -2,11 +2,11 @@
 
 **UCCPXaaS** — Unified Collaborative Communication Platform Experience as a Service
 
-Next-generation programmable telecom infrastructure powered by AI, secured by blockchain, compliant by design.
+Next-generation programmable telecom infrastructure powered by AI, compliant by design.
 
 ## Live Site
 
-- **GitHub Pages**: [https://dallen362-cpu.github.io/telvergence/](https://dallen362-cpu.github.io/telvergence/)
+- **[https://telvergence.com/](https://telvergence.com/)** (GitHub Pages + custom domain)
 
 ## Pages
 
@@ -18,8 +18,7 @@ Next-generation programmable telecom infrastructure powered by AI, secured by bl
 Telvergence is the private-label evolution of wholesale telecom infrastructure, enhanced with:
 
 - **AI Intelligence** — Call transcription, sentiment analysis, intent routing, predictive analytics
-- **Web3/ICP Blockchain** — On-chain CDR settlement, ISO 20022 compliant messaging, decentralized identity
-- **Military-Grade Security** — End-to-end encryption, STIR/SHAKEN, zero-trust architecture
+- **Security** — End-to-end encryption, STIR/SHAKEN, zero-trust architecture
 - **E911 Compliance** — Kari's Law, RAY BAUM's Act, dynamic location, global coverage
 - **Smart DID Network** — Wholesale root access to global telecom, zero data leakage
 - **Weather Intelligence** — Satellite integration, proactive emergency alerts
