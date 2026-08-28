@@ -19,3 +19,9 @@
 /members.html
   X-Robots-Tag: noindex, nofollow, noarchive
   Cache-Control: no-store
+/realm
+  X-Robots-Tag: noindex, nofollow, noarchive
+  Cache-Control: no-store
+/members
+  X-Robots-Tag: noindex, nofollow, noarchive
+  Cache-Control: no-store
