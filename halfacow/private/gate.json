@@ -2,8 +2,8 @@
   "v": 1,
   "kdf": "PBKDF2-SHA256",
   "iter": 400000,
-  "salt": "dYX6lvLI+PXg8x4IJ0epZA==",
-  "iv": "DE9Fk9ZpvTrcxYUR",
-  "wrapped": "PW9nUfui9TuLQw7pjlpBASG3z5ntOx9H6PvY8x6quiDOKJ9zKikzGEgcSrEkNIgc",
+  "salt": "BjQJdGZWPpbxm87dCVVU/g==",
+  "iv": "oEU5JdjZh353T2In",
+  "wrapped": "M7lv9Jab4kSgVvGuYkVdSpbax8oYRI6yqXyQA/4kHbjGK/F/kLS+TbOfIrgKs3Tj",
   "updated": "2026-09-02"
 }
