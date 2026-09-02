@@ -1,0 +1,9 @@
+{
+  "v": 1,
+  "kdf": "PBKDF2-SHA256",
+  "iter": 400000,
+  "salt": "dYX6lvLI+PXg8x4IJ0epZA==",
+  "iv": "DE9Fk9ZpvTrcxYUR",
+  "wrapped": "PW9nUfui9TuLQw7pjlpBASG3z5ntOx9H6PvY8x6quiDOKJ9zKikzGEgcSrEkNIgc",
+  "updated": "2026-09-02"
+}
